@@ -1,0 +1,30 @@
+<!-- <app-header title="avatar"></app-header> -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="/"> </ion-back-button>
+    </ion-buttons>
+    <ion-title>avatar</ion-title>
+    <ion-buttons slot="end">
+      <ion-avatar>
+        <img [src]="urlPicture">
+      </ion-avatar>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <ion-chip color="primary">
+    <ion-avatar>
+      <img [src]="path">
+    </ion-avatar>
+    <ion-label> Profile </ion-label>
+  </ion-chip>
+  <ion-list>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="/assets/img/profile.jpg">
+      </ion-avatar>
+      <ion-label> Profile </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
