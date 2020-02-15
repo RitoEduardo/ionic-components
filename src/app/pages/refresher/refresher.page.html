@@ -1,0 +1,16 @@
+<app-header title="Refresher"></app-header>
+
+<ion-content class="ion-padding">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <h1 *ngIf="!items || items.length === 0" style="text-align: center;">
+    Empty component, please refresher for get data.
+  </h1>
+  <ion-list>
+    <ion-item *ngFor="let item of items; let i = index">
+      {{ i + 1 }}
+    </ion-item>
+  </ion-list>
+
+</ion-content>

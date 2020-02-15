@@ -11,11 +11,16 @@ export class DataService {
     private http: HttpClient
   ) { }
 
+  getMenuOpts() {
+    return this.http.get<IComponent[]>('/assets/data/menu.json');
+  }
+
   getUsers() {
     return this.http.get('https://jsonplaceholder.typicode.com/users');
   }
 
-  getMenuOpts() {
-    return this.http.get<IComponent[]>('/assets/data/menu.json');
+  getAlbums() {
+    return this.http.get<any[]>('https://jsonplaceholder.typicode.com/albums');
   }
+
 }
