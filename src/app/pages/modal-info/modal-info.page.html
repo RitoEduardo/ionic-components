@@ -1,0 +1,27 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-title>modal-info</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-label>
+    {{ value1 }}
+  </ion-label>
+  <ion-label>
+    {{ value2 }}
+  </ion-label>
+  <ion-button 
+    color="primary" 
+    (click)="onExitWithoutArgs()" 
+    expand="full"
+  >
+    Exit Without Arguments
+  </ion-button>
+  <ion-button
+   (click)="onExitWithArgs()" 
+   color="secondary" 
+   expand="full"
+  >
+    Exit with Arguments
+  </ion-button>
+</ion-content>

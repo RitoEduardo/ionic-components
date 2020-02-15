@@ -1,5 +1,11 @@
 <ion-header no-border>
     <ion-toolbar>
+        <ion-buttons slot="start">
+            <!-- <ion-buttons (click)="onToggleMenu()">
+                <ion-icon slot="icon-only" name="menu"></ion-icon>
+            </ion-buttons>  -->
+            <ion-menu-button color="primary" menu="firstMenu"></ion-menu-button>
+        </ion-buttons>
         <ion-title>Componentes</ion-title>
     </ion-toolbar>
 </ion-header>
@@ -7,7 +13,7 @@
 <ion-content>
     <ion-list>
         <ion-item *ngFor="let list of components" [routerLink]="list.route" detail>
-            <ion-icon [name]="list.icon" slot="start"> </ion-icon>
+            <ion-icon [name]="list.icon" slot="start" color="tertiary"> </ion-icon>
             <ion-label>{{list.name}}</ion-label>
         </ion-item>
     </ion-list>

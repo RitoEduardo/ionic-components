@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
+import { DataService } from 'src/app/services/data.service';
+import { IComponent } from 'src/app/interfaces/interfaces';
 
 @Component({
   selector: 'app-inicio',
@@ -7,69 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioPage implements OnInit {
 
-  components: IComponent[] = [
-    {
-      icon: 'american-football',
-      name: 'Action Sheet',
-      route: '/action-sheet'
-    },
-    {
-      icon: 'appstore',
-      name: 'Alert',
-      route: '/alert'
-    },
-    {
-      icon: 'beaker',
-      name: 'Avatar',
-      route: '/avatar'
-    },
-    {
-      icon: 'radio-button-on',
-      name: 'Buttons',
-      route: '/buttons'
-    },
-    {
-      icon: 'qr-scanner',
-      name: 'Cards',
-      route: '/card'
-    },
-    {
-      icon: 'checkmark-circle-outline',
-      name: 'Checkbox',
-      route: '/check'
-    },
-    {
-      icon: 'time',
-      name: 'Date Time',
-      route: '/date'
-    },
-    {
-      icon: 'add-circle-outline',
-      name: 'Ionfab',
-      route: '/fab'
-    },
-    {
-      icon: 'grid',
-      name: 'Grid',
-      route: '/grid'
-    },
-    {
-      icon: 'logo-reddit',
-      name: 'Infinite scroll',
-      route: '/infinite-scroll'
-    }
-  ];
+  components: IComponent[] = [];
 
-
-  constructor() { }
+  constructor(
+    private menuCtrl: MenuController,
+    private dataService: DataService
+  ) {
+    this.dataService.getMenuOpts().subscribe( r => {
+      this.components = r;
+    });
+  }
 
   ngOnInit() {
   }
 
-}
+  onToggleMenu() {
+    this.menuCtrl.toggle();
+  }
 
-interface IComponent{
-  icon: string;
-  name: string;
-  route: string;
 }
