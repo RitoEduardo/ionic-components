@@ -5,12 +5,12 @@
       "route" : "/action-sheet"
     },
     {
-      "icon" : "appstore",
+      "icon" : "alert-circle",
       "name" : "Alert",
       "route" : "/alert"
     },
     {
-      "icon": "beaker",
+      "icon": "images",
       "name": "Avatar",
       "route": "/avatar"
     },
@@ -20,7 +20,7 @@
       "route" : "/buttons"
     },
     {
-      "icon" : "qr-scanner",
+      "icon" : "qr-code",
       "name" : "Cards",
       "route" : "/card"
     },
@@ -60,7 +60,7 @@
       "route" : "/list"
     },
     {
-      "icon" : "albums",
+      "icon" : "reorder-four",
       "name" : "List Reorder",
       "route" : "/list-reorder"
     },
@@ -85,7 +85,7 @@
       "route" : "/progress-bar"
     },
     {
-      "icon" : "arrow-round-down",
+      "icon" : "archive",
       "name" : "Refresher",
       "route" : "/refresher"
     },
@@ -93,5 +93,15 @@
       "icon" : "search",
       "name" : "Searchbar",
       "route" : "/searchbar"
+    },
+    {
+      "icon" : "copy",
+      "name" : "Segment",
+      "route" : "/segment"
+    },
+    {
+      "icon" : "albums",
+      "name" : "Slides",
+      "route" : "/slides"
     }
 ]
