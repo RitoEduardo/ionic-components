@@ -41,9 +41,10 @@ export class ToastPage implements OnInit {
     console.log('Ready');
     const toast = await this.toastCtrl.create({
       color: 'dark',
-      duration: 2000,
+      duration: 5000,
+      cssClass: 'example-style-toast',
       message: `
-        <ion-item style="background:black" color="dark">
+        <ion-item>
           <ion-icon slot="start" name="send"></ion-icon>
           <ion-label> Menssage send succesful </ion-label>
         </ion-item>`
