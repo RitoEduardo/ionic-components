@@ -103,5 +103,15 @@
       "icon" : "albums",
       "name" : "Slides",
       "route" : "/slides"
+    },
+    {
+      "icon" : "cog",
+      "name" : "Tabs",
+      "route" : "/tabs/schedule"
+    },
+    {
+      "icon" : "notifications-circle",
+      "name" : "Toast",
+      "route" : "/toast"
     }
 ]
